@@ -13,7 +13,6 @@ menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
 	if(!showMenu) {
-		console.log('click')
 		menuBtn.classList.add('close');
 		menu.classList.add('show');
 		menuNav.classList.add('show');
