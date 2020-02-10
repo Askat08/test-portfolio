@@ -4,6 +4,40 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
+	main#home .banner-caption {
+		display: flex;
+		flex-direction: column;
+		
+		h1 {
+			font-size: 3rem;
+		}
+	}
+
+	.cd-headline {
+		font-size: 1rem;
+		margin-left: 0;	
+		background-color: rgba(#1f4287, 0.6);
+		padding: 1rem 1.5rem;
+		color: #f9ff21;
+	}
+
+	main#home .icons {
+		position: static;
+		margin-top: 20rem;
+		margin-left: 80%;
+		// left: 0;
+		// top: 80%;
+	}
+
+	// Arrow bounce
+	.arrow {
+	  position: absolute;
+	  bottom: 5vh;
+	  width: 100vw;
+	  z-index: 20;
+	  right: -7rem;
+	}
+
 }
 
 // DESKTOP AND LAPTOPS;
@@ -11,13 +45,47 @@
 	.projects {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+	main#home .banner-caption {
+		display: flex;
+		flex-direction: column;
+		
+		h1 {
+			font-size: 3rem;
+		}
+	}
+// #21e6c1 #1f4287
+	.cd-headline {
+		font-size: 1rem;
+		margin-left: 0;	
+		background-color: rgba(#1f4287, 0.6);
+		padding: 1rem 1.5rem;
+		// color: #f9ff21;
+	}
+
+	main#home .icons {
+		position: static;
+		margin-top: 20rem;
+		margin-left: 70%;
+		// left: 0;
+		// top: 80%;
+	}
+
+	// Arrow bounce
+	.arrow {
+	  position: absolute;
+	  bottom: 5vh;
+	  width: 100vw;
+	  z-index: 20;
+	  right: -7rem;
+	}
 }
 
 // Tablets and small laptops
 @include mediaMd {
 	main {
-		align-items: center;
-		text-align: center;
+		// align-items: center;
+		// text-align: center;
 
 		.lg-heading {
 			line-height: 1rem;
@@ -27,30 +95,59 @@
 	}
 
 	main#home {
-		font-size: 0.8rem;
+		// font-size: 0.8rem;
 		// display: flex;
 		// justify-content: flex-start;
 		// align-items: flex-start;
 	}
 
-	main#home h1 {
-  	font-size: 5rem;
+	// main#home h1 {
+ //  	font-size: 5rem;
+	// }
+
+	// main#home h2 {
+	// 	width: 80vw;
+	// 	font-size: 1.8rem;
+	// 	margin-top: 20px;
+	// 	// position: absolute;
+	// 	// left: 30px;
+	// 	// top: 60%;
+	// 	padding: 60px;
+	// }
+
+	main#home .banner-caption {
+		display: flex;
+		flex-direction: column;
+		h1 {
+			font-size: 2rem;
+		}
 	}
 
-	main#home h2 {
-		width: 80vw;
-		font-size: 1.8rem;
-		margin-top: 20px;
-		// position: absolute;
-		// left: 30px;
-		// top: 60%;
-		padding: 60px;
+	.cd-headline {
+		// border: 2px #c86f5e solid;
+		background-color: rgba(#1f4287, 0.6);
+		font-size: 1rem;
+		// margin-right: 13%;
+		padding: 1rem 1rem;
+	}
+
+	.blc,
+  .cd-words-wrapper {
+		// font-size: 0.5rem;
+		padding-top: 9.5rem;
+		color: #c86f5e;
 	}
 
 	main#home .icons {
-		position: absolute;
+		position: static;
+		margin-top: 13rem;
+		margin-left: 92%;
+
+		.fab {
+			padding: 0.5rem;
+		}
 		// left: 0;
-		top: 80%;
+		// top: 80%;
 	}
 
 	main#about h1 {
@@ -136,21 +233,49 @@
 	.projects {
 		grid-template-columns: 1fr;
 	}
-}
 
+	// Arrow bounce
+	.arrow {
+	  position: absolute;
+	  bottom: 5vh;
+	  width: 100vw;
+	  z-index: 20;
+	  right: -6rem;
+	}
+}
 // Smartphones
 @include mediaSm {
 	body#bg-img header {
 	}
 
+	// .banner .banner-caption h1 {
+ //    font-size: 1rem; 
+ //  }
+ //  .banner .banner-caption p {
+ //    font-size: 17px; 
+ //  }
+ //  .banner #home-svg {
+ //    height: 80px; 
+ //  }
+ //  section.banner-blog .banner-caption h1 {
+ //    font-size: 32px; 
+ //  }
+
 	main#home {
   	display: flex;
   	flex-direction: column;
 
+  	.banner-caption {
+  		width: 110%;
+  	}
+
   	h1 {
-  		font-size: 3rem;
-  		display: flex;
-  		margin-bottom: 50px;
+  		border: 2px #c86f5e solid;
+  		box-shadow: -10px -10px rgba(#1f4287, 0.6);
+  		font-size: 2rem;
+  		// flex-direction: column;
+
+  		// margin-bottom: 50px;
   		// justify-content: flex-start;
   		// align-items: flex-start;
   	}
@@ -162,14 +287,52 @@
 			// padding: 6px;
   	}
 
+  	p {
+  		margin: 3rem 0;
+
+  		span {
+				font-size: 0.9rem;
+				// width: 90%;
+  		}
+
+  		.blc,
+  		.cd-words-wrapper {
+  			font-size: 0.9rem;
+  			padding-top: 1.5rem;
+  			margin-left: 0.5rem;
+  			color: #c86f5e;
+  		}
+  	}
+
 		.icons {
 			position: static;
+			margin-top: 7rem;
+			margin-left: 80%;
 			// display: flex;
 			// position: absolute;
 			// left: 0;
-			// top: 80%;
+			// margin-bottom: 100px;
 		}
 	}
+
+	.menu-bar {
+    position: absolute;
+    z-index: 3;
+    right: 5rem;
+    top: 40px;
+    cursor: pointer;
+  }
+
+// Arrow bounce
+.arrow {
+  position: absolute;
+  bottom: 1rem;
+  // right: 2rem;
+  // bottom: 0;
+  // width: 100vw;
+  // z-index: 20;
+  // right: 18rem;
+}
 
 		// .menu-bar {
 		// 	grid-row-start: 1;
